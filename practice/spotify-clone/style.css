@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  height: 100vh;
+  color: #b3b3b3;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+button {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.main {
+  height: 100%;
+  display: grid;
+  grid-template-areas:
+    'top-bar top-bar'
+    'nav-bar main-view'
+    'now-playing-bar now-playing-bar';
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+
+.top-bar {
+  grid-area: top-bar;
+  background: rgb(72, 32, 176);
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-bar {
+  grid-area: nav-bar;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  padding: 1rem;
+}
+
+.nav-bar__brand {
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  color: white;
+  margin: 0.5rem;
+}
+
+.nav-bar__navigations {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-bar__link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  color: inherit;
+  height: 40px;
+}
+
+.nav-bar__link-icon {
+  height: 16px;
+}
+
+.nav-bar__menu {
+  margin-top: 25px;
+}
+
+.nav-bar__playlist {
+  font-size: smaller;
+  list-style-type: none;
+  padding-left: 0;
+  overflow: scroll;
+}
+
+.nav-bar__install {
+  margin-top: auto;
+}
+
+.now-playing-bar {
+  grid-area: now-playing-bar;
+  background: purple;
+}
+
+.main-view {
+  background: violet;
+}
+
+.bold {
+  font-weight: bold;
+}
